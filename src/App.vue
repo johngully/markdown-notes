@@ -1,17 +1,17 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <MarkdownEditor />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MarkdownEditor from './components/MarkdownEditor.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    MarkdownEditor
   }
 }
 </script>
