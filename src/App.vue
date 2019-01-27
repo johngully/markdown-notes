@@ -2,16 +2,19 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <MarkdownEditor />
+    <MarkdownPreview />
   </div>
 </template>
 
 <script>
 import MarkdownEditor from './components/MarkdownEditor.vue'
+import MarkdownPreview from './components/MarkdownPreview.vue'
 
 export default {
   name: 'app',
   components: {
-    MarkdownEditor
+    MarkdownEditor,
+    MarkdownPreview
   }
 }
 </script>
