@@ -4,9 +4,9 @@ import debounce from 'lodash/debounce';
 const autosaveInterval = 2000;
 
 export default {
-  autosaveNotes: debounce(function ({ commit }, notes) {
+  autosaveNotes: debounce(function ({ dispatch }, notes) {
     console.debug('ACTION:', 'autosaveNotes', `debounced to every ${autosaveInterval}ms`);
-    commit('saveNotes', notes);
+    dispatch('saveNotes', notes);
   }, autosaveInterval),
 
   saveNotes: function ({ commit }, notes) {

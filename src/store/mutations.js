@@ -1,9 +1,4 @@
 export default {
-  saveNotes: function (state, notes) {
-    console.debug('MUTATION:', 'saveNotes', notes)
-    // TODO: Save the notes to a file
-  },
-  
   saveNotesSuccess: function (state, notes) {
     console.debug('MUTATION:', 'saveNotesSuccess', notes)
     // TODO: This may not be needed after saving the file
