@@ -2,6 +2,7 @@ export default {
   saveNotesSuccess: function (state, notes) {
     console.debug('MUTATION:', 'saveNotesSuccess', notes)
     // TODO: This may not be needed after saving the file
+    state.pendingChanges = false;
   },
 
   saveNotesError: function (error) {
@@ -12,5 +13,6 @@ export default {
   updateNotes: function (state, notes) {
     console.debug('MUTATION:', 'updateNotesError', notes);
     state.notes = notes;
+    state.pendingChanges = true;
   }
 }

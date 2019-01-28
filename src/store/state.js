@@ -1,3 +1,4 @@
 export default {
-  notes: ''
-}
+  notes: '',
+  pendingChanges: false
+};
