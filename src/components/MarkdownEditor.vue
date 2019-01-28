@@ -13,7 +13,10 @@ import { mapState } from 'vuex'
 export default {
   name: 'MarkdownEditor',
   computed: {
-    ...mapState(['pendingChanges']),
+    ...mapState({
+      pendingChanges: state => state.file.pendingChanges,
+      currentFilePath: state => state.file.currentFilePath
+    }),
     notes: {
       get () {
         return this.$store.state.notes;
@@ -25,7 +28,7 @@ export default {
   },
   methods: {
     autosaveNotes: function () {
-      this.$store.dispatch('autosaveNotes', this.notes)
+      this.$store.dispatch('autosaveNotes', { filePath: this.currentFilePath, notes: this.notes })
     }
   }
 };
