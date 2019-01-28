@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <h2>Input Preview</h2>
+  <div id="markdown-preview" class="position-right">
     <div v-html="notesAsHtml"></div>
   </div>
 </template>

@@ -1,9 +1,6 @@
 <template>
-  <div>
-    <h2>Input Note</h2>
+  <div id="markdown-editor" class="position-left">
     <textarea v-model="notes" @input="autosaveNotes()"></textarea>
-    <div v-if="pendingChanges">Unsaved changes</div>
-    <div v-else>Saved successfully</div>
   </div>
 </template>
 
@@ -14,7 +11,6 @@ export default {
   name: 'MarkdownEditor',
   computed: {
     ...mapState({
-      pendingChanges: state => state.file.pendingChanges,
       currentFilePath: state => state.file.currentFilePath
     }),
     notes: {
